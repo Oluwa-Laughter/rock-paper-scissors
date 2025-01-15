@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  screens: {
-    sm: "28.75em",
-    md: "37.5em",
-    lg: "56.25em",
-  },
-
   theme: {
     extend: {
       colors: {
@@ -33,6 +27,11 @@ export default {
       },
       fontFamily: {
         barlow: ["Barlow Semi Condensed", "sans-serif"],
+      },
+      screens: {
+        lg: { max: "56.25em" },
+        md: { max: "37.5em" },
+        sm: { max: "28.75em" },
       },
     },
   },
