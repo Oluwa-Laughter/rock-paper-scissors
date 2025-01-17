@@ -5,10 +5,10 @@ import { createContext } from "react";
 const GameContext = createContext();
 
 const initialState = {
+  played: "start",
   score: 0,
   playerChoice: null,
   computerChoice: null,
-  played: "start",
   winner: null,
   isRuleOpened: false,
 };
