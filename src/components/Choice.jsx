@@ -26,13 +26,13 @@ function Choice() {
 
   return (
     <div className="flex flex-col items-center lg:row-start-2 lg:col-span-full">
-      <h3 className="text-white text-[5.6rem] font-bold drop-shadow-text-sh uppercase">
+      <h3 className="text-white text-[5rem] font-bold drop-shadow-text-sh uppercase">
         {player && "you win"}
         {computer && "you lose"}
         {draw && "it's a tie"}
       </h3>
       <button
-        className={`text-[1.6rem] font-semibold tracking-[0.25rem] uppercase py-6 px-24 bg-score rounded-[0.8rem] mt-5 ${
+        className={`text-[1.5rem] font-semibold tracking-[0.2rem] uppercase py-6 px-24 bg-score rounded-[0.8rem] mt-5 ${
           player && "text-grey"
         } ${computer && "text-secondary"} ${draw && "text-grey"}`}
         onClick={playAgain}

@@ -8,7 +8,7 @@ import { useGame } from "../contexts/GameContext";
 function HomePage() {
   const { played, isRuleOpened } = useGame();
   return (
-    <section className="flex flex-col items-center min-h-screen py-20 lg:py-12 lg:px-12 md:px-6">
+    <section className="flex flex-col min-h-screen items-center lg:py-10 lg:px-12 sm:mx-0 md:px-0">
       <Header />
       {played === "start" && <GameBox />}
       {played === "play" && <ChooseBoxes />}

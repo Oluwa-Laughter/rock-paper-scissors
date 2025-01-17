@@ -1,7 +1,7 @@
 function ChooseBox({ heading, type, isWinner }) {
   return (
     <div className="flex flex-col gap-24 items-center lg:gap-12">
-      <h2 className=" text-white font-bold tracking-[0.3rem] drop-shadow-text-sh leading-[3.2rem] uppercase lg:text-[1.3rem] text-[2.4rem] lg:order-1 lg:tracking-[0.1875rem]">
+      <h2 className="text-[2.4rem] text-white font-bold drop-shadow-text-sh uppercase lg:order-1 lg:text-[1.3rem]">
         {heading}
       </h2>
       <div className="relative min-h-[23rem] min-w-[23rem] lg:min-w-[13rem] lg:min-h-[13rem] lg:w-[13rem] lg:h-[13rem]">
