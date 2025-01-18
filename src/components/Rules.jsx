@@ -1,11 +1,14 @@
+import { useBonus } from "../contexts/BonusGameContext";
 import { useGame } from "../contexts/GameContext";
 
 function Rules() {
   const { dispatch } = useGame();
 
+  const { dispatch: dispatchBonus } = useBonus();
+
   function handleRuleOpen() {
     if (location.pathname === "/bonus") {
-      // bonusDispatch({ type: "setIsRuleOpened", payload: true });
+      dispatchBonus({ type: "setIsRuleOpened", payload: true });
     } else {
       dispatch({ type: "setIsRuleOpened", payload: true });
     }

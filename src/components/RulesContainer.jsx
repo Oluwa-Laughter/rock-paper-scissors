@@ -2,14 +2,16 @@ import Close from "/images/icon-close.svg";
 import Rules from "/images/image-rules.svg";
 import RulesBonus from "/images/image-rules-bonus.svg";
 import { useGame } from "../contexts/GameContext";
+import { useBonus } from "../contexts/BonusGameContext";
 
 function RulesContainer() {
   const { dispatch } = useGame();
-  // const { dispatch: bonusDispatch } = useBonus();
+
+  const { dispatch: dispatchBonus } = useBonus();
 
   function handleRuleClose() {
     if (location.pathname === "/bonus") {
-      // bonusDispatch({ type: "setIsRuleOpened", payload: false });
+      dispatchBonus({ type: "setIsRuleOpened", payload: false });
     } else {
       dispatch({ type: "setIsRuleOpened", payload: false });
     }

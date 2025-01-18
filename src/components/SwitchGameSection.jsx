@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router";
-import { useGame } from "../contexts/GameContext";
 import { Link } from "react-router";
+import { useGame } from "../contexts/GameContext";
+import { useBonus } from "../contexts/BonusGameContext";
 
 function SwitchGameSection() {
   const { dispatch } = useGame();
+  const { dispatch: dispatchBonus } = useBonus();
 
   const navigate = useNavigate();
 
@@ -12,7 +14,7 @@ function SwitchGameSection() {
   function toggleSection() {
     if (bonusSection) {
       navigate("/");
-      //  bonusDispatch({ type: "resetGame" });
+      dispatchBonus({ type: "resetGame" });
     } else {
       navigate("/bonus");
       dispatch({ type: "resetGame" });
